@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <!--  прописываем сервлет:  -->
+    <!--  1 из 2:  -->
+    <servlet>
+        <servlet-name>AccountServlet</servlet-name>
+        <servlet-class>homework13.elementary.controller.AccountServlet</servlet-class> <!-- где он лежит в проекте -->
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AccountServlet</servlet-name>
+        <url-pattern>/accounts</url-pattern> <!-- "добавка" в адрессной строке по которой будем обращться к сервлету -->
+    </servlet-mapping>
+
+    <!--  2 из 2:  -->
+    <servlet>
+        <servlet-name>ClientServlet</servlet-name>
+        <servlet-class>homework13.elementary.controller.ClientServlet</servlet-class> <!-- где он лежит в проекте -->
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ClientServlet</servlet-name>
+        <url-pattern>/clients</url-pattern> <!-- "добавка" в адрессной строке по которой будем обращться к сервлету -->
+    </servlet-mapping>
+</web-app>
